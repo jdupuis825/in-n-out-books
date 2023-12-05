@@ -1,0 +1,40 @@
+<!--Name: Jocelyn Dupuis-->
+<!--File: book-list.component.html-->
+<!--Date: 12/05/2023-->
+<!--Description: HTML file for book-list components-->
+
+<!--html for book listing page-->
+
+<!--spinner displayed when books array has zero count-->
+<ng-container *ngIf="books.length === 0">
+  <mat-spinner class="spinner"></mat-spinner>
+</ng-container>
+
+<!--displays green h2 tag-->
+<div *ngIf="books.length > 0">
+  <!--using books length to set number of books in favorites list-->
+  <h2 class="green">Top {{books.length}} Favorite Books</h2>
+  <!--main container-->
+  <div class="grid-container">
+    <ng-container *ngFor="let book of books">
+      <mat-card class="grid-container__item mat-elevation-z8">
+        <!--mat card title-->
+        <mat-card-title>
+          <a class="grid-container__ahref blue" (click)="showBookDetails(book.isbn)">{{book.title}}</a>
+        </mat-card-title>
+        <br />
+        <!--mat card content-->
+        <mat-card-content>
+          <!--list items for fav books ISBN, pages, and authors-->
+          <mat-list>
+            <mat-list-item>ISBN: {{ book.isbn }}</mat-list-item>
+            <mat-list-item>Pages: {{ book.numOfPages }}</mat-list-item>
+            <mat-list-item>Authors: {{ book.authors.join(',')}}</mat-list-item>
+          </mat-list>
+
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+</div>
+

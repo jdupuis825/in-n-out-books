@@ -1,0 +1,26 @@
+<!--Name: Jocelyn Dupuis-->
+<!--File: book-details-dialog.component.html-->
+<!--Date: 11/16/2023-->
+<!--Description: HTML file for book-detail-dialog components-->
+
+<!--window display of book details-->
+<mat-card>
+  <!--displays book title in blue-->
+  <mat-card-title class="blue">
+    {{ book.title }}
+  </mat-card-title>
+  <br />
+  <br />
+  <!--displays book details in columns-->
+  <mat-card-content>
+    <div fxLayout="column">
+      <p>ISBN: {{ book.isbn }}</p>
+      <p>Description:<br /> {{ book.description }}</p>
+      <p>Authors:<br /> {{ book.authors.join(', ') }}</p>
+    </div>
+  </mat-card-content>
+  <!--displays green button that closes dialog window clicked-->
+  <mat-card-actions align="end">
+    <button mat-raised-button color="accent" matDialogClose="confirm">OK</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,25 @@
+<!--Name: Jocelyn Dupuis -->
+<!--File: wishlist-create.component.html -->
+<!--Date: 11/21/2023-->
+<!--Description: HTML file for wishlist create component-->
+
+<!--HTML file for wishlist page-->
+<!--form using flex layout-->
+<form fxLayout="column" class="wishlist-create-form">
+
+    <!--field for book title-->
+    <mat-form-field fcLayout appearance="fill">
+        <mat-label>Title</mat-label>
+        <input type="text" name="title" matInput [(ngModel)]="item.title">
+    </mat-form-field>
+
+    <!--field for authors-->
+    <mat-form-field fcLayout appearance="fill">
+      <mat-label>Authors</mat-label>
+      <input type="text" name="authors" matInput [(ngModel)]="item.authors">
+    </mat-form-field>
+
+    <!--button to add wishlist item-->
+    <button mat-button color="primary" (click)="addItem()">Add item</button>
+</form>
+

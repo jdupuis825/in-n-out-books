@@ -1,0 +1,36 @@
+// Name: Jocelyn Dupuis
+// File: book-list.component.scss
+// Date: 12/05/2023
+// Description: sassy file for book-list components
+
+
+//styling for grid container
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto;
+  padding: 25px;
+}
+
+//styling for grid container items
+.grid-container__item {
+  padding: 20px;
+  font-size: 30px;
+}
+
+//styling for a href
+.grid-container__ahref {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+//styling for a href hover
+.grid-container__ahref:hover {
+  text-decoration: underline;
+}
+
+//styling for spinner
+.spinner {
+  margin-top: 2%;
+  margin-left: 45%;
+}
